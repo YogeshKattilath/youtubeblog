@@ -1,0 +1,14 @@
+<h1>Posts#index</h1>
+<p>Find me in app/views/posts/index.html.erb</p>
+
+<% @posts.each do |f| %>
+	<div>
+	<%= link_to image_tag(f.image.url(:small))%>
+	<br/>
+	<h3><%= link_to f.title, f %> </h3><p>Created <%= f.created_at.strftime("%B, %d, %Y") %> 
+	| <%= link_to "Edit", edit_post_path(f) %> | 
+		
+	</p> 
+	<p><%= f.body  %></p>
+	</div>
+<% end %>
