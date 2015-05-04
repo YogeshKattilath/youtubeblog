@@ -11,6 +11,25 @@
 		</div>
 	<% end %>
 	<p>
+		<%= f.collection_select :category_id, Category.all, :id, :name, {promt: "Choose a Category"} %>
+	</p>
+	<p>
+		<%= f.select(:color, [['#bb5551', '#bb5551'],
+                                  ['#228c9b', '#228c9b'],
+                                  ['#fff', '#fff'],
+                                  ['#343434', '#343434'],
+                                  ['#B43F5A', '#B43F5A'],
+                                  ['#4B1D37', '#4B1D37'],
+                                  ['#e3e3d8', '#e3e3d8'],
+                                  ['#BB5551', '#BB5551'],
+                                  ['#BB5551', '#BB5551'],	
+                                  ['#70575B', '#70575B']
+                                 ],{ :prompt => "Please select Color"}
+                                 ) %>
+	</p>
+
+
+	<p>
 		<%= f.input :image %>
 	</p>
 	<p>

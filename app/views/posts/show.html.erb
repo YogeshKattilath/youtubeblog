@@ -1,36 +1,79 @@
-<div class="container">
-<h1>Posts#show</h1>
-<p>Find me in app/views/posts/show.html.erb</p>
-<div>
-    <%= image_tag(@post.image.url(:medium)) %>
-</div>
+<div id="content" class="site-content">
+    <div id="primary" class="content-area"> 
+        <main id="main" class="site-main" role="main">
 
-<%= @post.title %>
-<p>
-	Submitted <%= time_ago_in_words(@post.created_at) %> Ago
-</p>
-<p>
-	<%= link_to 'Delete', post_path(@post), method: :delete, data: {confirm: 'Are you sure?'} %>
-</p>
-<%= @post.body %>
+            <article id="post-27" class="post-27 post type-post status-publish format-audio has-post-thumbnail hentry category-ideas category-news tag-tag2 tag-tag5 post_format-post-format-audio"> 
+            <header class="entry-header clear">
+                <h1 class="entry-title"><%= @post.title %></h1>
+                <div class="entry-meta clear">
+                <span class="posted-on">
+                    <a href="http://demos.quadroideas.com/binderpro/2014/05/04/post-format-audio/" title="12:15 pm" rel="bookmark" >
+                    <time class="entry-date published" datetime="2014-05-04T12:15:44+00:00"><%= @post.created_at.strftime("%B, %d, %Y") %> </time>
+                    <time class="updated" datetime="2014-11-14T18:14:36+00:00">Nov 14, 2014</time></a>
+                </span>
+               
+                <p class="cat-links">In <a href="http://demos.quadroideas.com/binderpro/category/ideas/" rel="category tag">Hotshop</a>, <a
+                    href="http://demos.quadroideas.com/binderpro/category/news/" rel="category tag"><%= @post.category.name %></a>.
+                </p>
+                </div>
+            </header>
+            <div class="entry-thumbnail"> 
+            <%= link_to image_tag(@post.image.url(:medium), :class => 'attachment-small-thumb wp-post-image')%>
+            <!-- width="1400" height="480"-->
+            </div>
 
-<%= social_share_button_tag("My Site") %>
+            <div class="entry-content"> <!--[if lt IE 9]><script>document.createElement('audio');</script><![endif]--> 
+           
 
-<div id="comments">
-	<h2><%= @post.comments.count %> Comments</h2>
+            <p><%= @post.body %></p>
+         
 
-	<%= render @post.comments %>
+          
+            <div class="sharedaddy sd-sharing-enabled">
+                <div class="robots-nocontent sd-block sd-social sd-social-icon sd-sharing">
+                    <h3 class="sd-title">Share this post</h3>
+                    <%= social_share_button_tag(@post.title, :url => "http://classpro.in/") %>
+                <div class="sd-content">
+                    <ul>
+                        <li class="share-facebook"><a
+                            rel="nofollow" data-shared="sharing-facebook-27" class="share-facebook sd-button share-icon no-text" href="http://demos.quadroideas.com/binderpro/2014/05/04/post-format-audio/?share=facebook" target="_blank" title="Share on Facebook"><span></span><span class="sharing-screen-reader-text">Share on Facebook (Opens in new window)</span></a>
+                        </li>
+                        <li class="share-twitter"><a
+                            rel="nofollow" data-shared="sharing-twitter-27" class="share-twitter sd-button share-icon no-text" href="http://demos.quadroideas.com/binderpro/2014/05/04/post-format-audio/?share=twitter" target="_blank" title="Click to share on Twitter"><span></span><span class="sharing-screen-reader-text">Click to share on Twitter (Opens in new window)</span></a>
+                        </li>
+                        <li class="share-google-plus-1"><a
+                            rel="nofollow" data-shared="sharing-google-27" class="share-google-plus-1 sd-button share-icon no-text" href="http://demos.quadroideas.com/binderpro/2014/05/04/post-format-audio/?share=google-plus-1" target="_blank" title="Click to share on Google+"><span></span><span class="sharing-screen-reader-text">Click to share on Google+ (Opens in new window)</span></a>
+                        </li>
+                        <li class="share-tumblr"><a
+                            rel="nofollow" data-shared="" class="share-tumblr sd-button share-icon no-text" href="http://demos.quadroideas.com/binderpro/2014/05/04/post-format-audio/?share=tumblr" target="_blank" title="Click to share on Tumblr"><span></span><span class="sharing-screen-reader-text">Click to share on Tumblr (Opens in new window)</span></a>
+                        </li>
+                        <li class="share-pinterest"><a
+                            rel="nofollow" data-shared="sharing-pinterest-27" class="share-pinterest sd-button share-icon no-text" href="http://demos.quadroideas.com/binderpro/2014/05/04/post-format-audio/?share=pinterest" target="_blank" title="Click to share on Pinterest"><span></span><span class="sharing-screen-reader-text">Click to share on Pinterest (Opens in new window)</span></a>
+                        </li>
+                        <li class="share-linkedin"><a
+                            rel="nofollow" data-shared="sharing-linkedin-27" class="share-linkedin sd-button share-icon no-text" href="http://demos.quadroideas.com/binderpro/2014/05/04/post-format-audio/?share=linkedin" target="_blank" title="Click to share on LinkedIn"><span></span><span class="sharing-screen-reader-text">Click to share on LinkedIn (Opens in new window)</span></a>
+                        </li>
+                        <li class="share-email"><a
+                            rel="nofollow" data-shared="" class="share-email sd-button share-icon no-text" href="http://demos.quadroideas.com/binderpro/2014/05/04/post-format-audio/?share=email" target="_blank" title="Click to email this to a friend"><span></span><span class="sharing-screen-reader-text">Click to email this to a friend (Opens in new window)</span></a>
+                        </li>
+                        <li class="share-print"><a
+                            rel="nofollow" data-shared="" class="share-print sd-button share-icon no-text" href="http://demos.quadroideas.com/binderpro/2014/05/04/post-format-audio/#print" target="_blank" title="Click to print"><span></span><span
+                            class="sharing-screen-reader-text">Click to print (Opens in new window)</span></a>
+                        </li>
+                        <li class="share-end"></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
 
-	<h3>Add a Comments:</h3>
-	<%= render "comments/form" %>
-</div>
-</div>
+        <div id='jp-relatedposts' class='jp-relatedposts' >
+        </div>
+    </div>
 
-
-<div id="disqus_thread"></div>
+    <div id="disqus_thread"></div>
 <script type="text/javascript">
     /* * * CONFIGURATION VARIABLES * * */
-    var disqus_shortname = 'yogeshdisqus';
+    var disqus_shortname = 'blogkattilath';
     
     /* * * DON'T EDIT BELOW THIS LINE * * */
     (function() {
@@ -39,4 +82,15 @@
         (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
     })();
 </script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+
+  
+    </article>
+
+    
+
+    
+    </main>
+        </div>
+                </div>
+
+

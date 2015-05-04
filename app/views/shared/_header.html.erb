@@ -1,0 +1,45 @@
+
+
+<header id="masthead" class="site-header static-menu header-layout1 show-search" role="banner">
+<div class="inner-header">
+<div class="site-branding">
+	<h1 class="site-title logo-title"> <a
+	href="http://demos.quadroideas.com/binderpro/" rel="home"> <img
+	src="http://cdn.quadroideas.com/binderpro/files/2014/07/logo-binder-pro-web5-e1406763762293.png" alt="Binder PRO" title="Binder PRO Logo"> </a></h1>
+</div>
+<h2 class="site-description">Welcome to Binder PRO WP Theme. This is a short description about this site. Enjoy being here!</h2>
+<ul class="social-area  brand-color header-social-icons">
+	<li><a href="#" target="_self" title="Facebook"><i class="fa fa-facebook"></i></a></li>
+	<li><a href="#" target="_self" title="Instagram"><i class="fa fa-instagram"></i></a></li>
+	<li><a href="#" target="_self" title="Pinterest"><i class="fa fa-pinterest"></i></a></li>
+	<li><a href="#" target="_self" title="Twitter"><i class="fa fa-twitter"></i></a></li>
+</ul>
+<h1 class="menu-toggle"><i class="fa fa-bars"></i></h1>
+<nav id="site-navigation" class="main-navigation" role="navigation">
+	<div class="inner-nav"> <a class="skip-link screen-reader-text" href="#content">Skip to content</a>
+		<div class="menu-main-manu-container">
+			<ul id="menu-main-manu" class="menu">
+				<li id="menu-item-1997" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-1997">
+				<%= link_to "Home", posts_path %>
+				</li>
+
+				<% Category.all.each do |category|  %>
+				<li id="menu-item-1997" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-1997">	<%= link_to category.name, posts_path(category: category.name)%> </li>
+				<% end %>
+
+				
+				
+			</ul>
+		</div>
+		<div class="header-search">
+			<form role="search" method="get" class="search-form" action="http://demos.quadroideas.com/binderpro/"> 
+				<label> <span class="screen-reader-text">Search for:</span> 
+				<input type="search" class="search-field" placeholder="" value="" name="s" title="Search for:" /> </label> 
+				<input type="submit" class="search-submit" value="Search" />
+			</form>
+		</div>
+		<span class="search-handler"></span>
+	</div> 
+</nav>
+</div>
+<div class="header-extras"></div> </header>

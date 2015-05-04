@@ -3,7 +3,12 @@ class PostsController < ApplicationController
   before_action :authenticate_user!, except: [:index, :show]
 
   def index
-  	@posts = Post.all.order('created_at DESC')
+    if params[:category].present?
+      @category = Category.find_by(name: params[:category])
+      @posts = Post.where(category_id: @category.id).order('created_at DESC')
+    else  
+  	 @posts = Post.all.order('created_at DESC')
+    end
   end
 
   def new
@@ -26,7 +31,7 @@ class PostsController < ApplicationController
   def update
     @post = Post.find(params[:id])
 
-    if @post.update(params[:post].permit(:title,:body,:image))
+    if @post.update(params[:post].permit(:title,:body,:image,:color))
       redirect_to @post
     else  
       render ''
@@ -46,6 +51,6 @@ class PostsController < ApplicationController
   private
 
   def params_post
-  	params.require(:post).permit(:title, :body, :image)
+  	params.require(:post).permit(:title, :body, :image,:color, :category_id)
   end
 end

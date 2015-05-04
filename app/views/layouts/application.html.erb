@@ -3,47 +3,90 @@
 <head>
   <title>Youtubeblog</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+<link rel="alternate" type="application/rss+xml" title="Binder PRO &raquo; Blog Masonry, 3 Columns with margins Comments Feed" href="http://demos.quadroideas.com/binderpro/blog/blog-masonry-3-columns-with-margins/feed/" />
+<link rel='stylesheet' id='contact-form-7-css'  href='http://cdn.quadroideas.com/binderpro/wp-content/plugins/contact-form-7/includes/css/styles.css?ver=4.1' type='text/css' media='all' />
+<link rel='stylesheet' id='crellyslider-css'  href='http://cdn.quadroideas.com/binderpro/wp-content/plugins/crelly-slider/css/crellyslider.css?ver=0.8.1' type='text/css' media='all' />
+<link rel='stylesheet' id='woocommerce-layout-css'  href='http://cdn.quadroideas.com/binderpro/wp-content/plugins/woocommerce/assets/css/woocommerce-layout.css?ver=2.3.6' type='text/css' media='all' />
+<link rel='stylesheet' id='woocommerce-smallscreen-css'  href='http://cdn.quadroideas.com/binderpro/wp-content/plugins/woocommerce/assets/css/woocommerce-smallscreen.css?ver=2.3.6' type='text/css' media='only screen and (max-width: 768px)' />
+<link rel='stylesheet' id='woocommerce-general-css'  href='http://cdn.quadroideas.com/binderpro/wp-content/plugins/woocommerce/assets/css/woocommerce.css?ver=2.3.6' type='text/css' media='all' />
+<link rel='stylesheet' id='style-switcher-style-css'  href='http://cdn.quadroideas.com/binderpro/wp-content/plugins/binderpro-switcher/style-switcher-styles.css?ver=4.1.1' type='text/css' media='all' />
+<link rel='stylesheet' id='responsive-lightbox-nivo-front-css'  href='http://cdn.quadroideas.com/binderpro/wp-content/plugins/responsive-lightbox/assets/nivo/nivo-lightbox.css?ver=4.1.1' type='text/css' media='all' />
+<link rel='stylesheet' id='responsive-lightbox-nivo-front-template-css'  href='http://cdn.quadroideas.com/binderpro/wp-content/plugins/responsive-lightbox/assets/nivo/themes/default/default.css?ver=4.1.1' type='text/css' media='all' />
+<link rel='stylesheet' id='quadro-font-awesome-css'  href='//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css?ver=3.2.1' type='text/css' media='all' />
+<link rel='stylesheet' id='quadro-page-builder-css'  href='http://cdn.quadroideas.com/binderpro/wp-content/themes/binderpro/inc/qi-framework/plugins/page-builder-styles.css?ver=4.1.1' type='text/css' media='all' />
+<link rel='stylesheet' id='quadro-crelly-slider-css'  href='http://cdn.quadroideas.com/binderpro/wp-content/themes/binderpro/inc/qi-framework/plugins/crelly-slider-styles.css?ver=4.1.1' type='text/css' media='all' />
+
+<link rel='stylesheet' id='woocommerce-styles-css'  href='http://cdn.quadroideas.com/binderpro/wp-content/themes/binderpro/inc/woocommerce-styles.css?ver=4.1.1' type='text/css' media='all' />
+<link rel='stylesheet' id='jetpack_css-css'  href='http://cdn.quadroideas.com/binderpro/wp-content/plugins/jetpack/css/jetpack.css?ver=3.3.3' type='text/css' media='all' />
+  
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+
+
+  
+<script type='text/javascript' src='http://cdn.quadroideas.com/binderpro/wp-includes/js/jquery/jquery.js?ver=1.11.1'></script>
+<script type='text/javascript' src='http://cdn.quadroideas.com/binderpro/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.2.1'></script>
+<script type='text/javascript' src='http://cdn.quadroideas.com/binderpro/wp-content/plugins/crelly-slider/js/jquery.crellyslider.min.js?ver=0.8.1'></script>
+<script type='text/javascript' src='http://cdn.quadroideas.com/binderpro/wp-content/plugins/responsive-lightbox/assets/nivo/nivo-lightbox.min.js?ver=4.1.1'></script>
+<script type='text/javascript'>var rlArgs={"script":"nivo","selector":"lightbox","custom_events":"","activeGalleries":"1","effect":"fade","clickOverlayToClose":"1","keyboardNav":"1","errorMessage":"The requested content cannot be loaded. Please try again later."};</script>
+
+<script type='text/javascript' src='http://cdn.quadroideas.com/binderpro/wp-content/plugins/responsive-lightbox/js/front.js?ver=4.1.1'></script>
+<script type='text/javascript' src='//ajax.googleapis.com/ajax/libs/webfont/1.4.7/webfont.js?ver=4.1.1'></script>
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://demos.quadroideas.com/binderpro/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://cdn.quadroideas.com/binderpro/wp-includes/wlwmanifest.xml" />
+
+<meta name="generator" content="WordPress 4.1.1" />
+<meta name="generator" content="WooCommerce 2.3.6" />
+<link rel='canonical' href='http://demos.quadroideas.com/binderpro/blog/blog-masonry-3-columns-with-margins/' />
+<link rel='shortlink' href='http://demos.quadroideas.com/binderpro/?p=839' />
+
+<script type="text/javascript">var ajaxurl="http://demos.quadroideas.com/binderpro/wp-admin/admin-ajax.php"</script>
+<script>WebFont.load({google:{families:['Droid+Serif:normal, bold','Roboto:300, normal, bold',],},timeout:3500});</script>
+
+
   <%= csrf_meta_tags %>
+
+
+<style>
+
+body{
+  background-color:#eaeaea;
+  font-family:"Roboto";
+  font-size:18px
+  }
+.mod-title, .meta-nav strong, .site-header .widget-title, .static-menu .main-navigation .menu a{font-family:"Roboto"}.single-post article a, .single-post article a:visited,
+.page-content a, .page-content a:visited{color:#BB5551}a:hover,
+.single-post article a:hover,
+.page-content a:hover{color:#231f20}h1 a, h2 a, h3 a, h4 a, h5 a, h6 a, h1, h2, h3, h4, h5, h6,
+.mod-editor-content, .readmore-link, input[type="submit"], .comment-reply-link,
+.comment-author cite, .post-navigation .meta-nav, .paging-navigation .meta-nav, .comment-navigation a,
+blockquote, q, .taxonomy-description p, .wpcf7 p, .read-author-link a, .qbtn, input[type="button"],
+.flashnews-content .entry-title, div#jp-relatedposts h3.jp-relatedposts-headline{font-family:"Droid Serif"}.woocommerce a.button, .woocommerce button.button, .woocommerce input.button, .woocommerce #respond input#submit,
+.woocommerce #content input.button, .woocommerce-page a.button, .woocommerce-page button.button, .woocommerce-page input.button,
+.woocommerce-page #respond input#submit, .woocommerce-page #content
+input.button{font-family:"Droid Serif"}.main-navigation .menu
+a{font-family:"Droid Serif"}.site-footer{background-color:#fff}.site-footer, .widget select, .widget input[type="submit"]{color:#}.site-footer
+a{color:#}body{font-weight:300}.slider-nav-item
+img{-webkit-user-select:none;-khtml-user-select:none;-moz-user-select:none;-o-user-select:none;user-select:none}.page-id-501{background:#fff}.page-id-501 .site-header{border-bottom:3px solid #000}.page-id-501 .quadro-mod{padding-top:15px;padding-bottom:15px}section#post-250{padding:0}section#post-588{padding:0
+4%}section#post-569 .widget-area{background:#fafafa}section#post-566 .widget-area{border:3px
+solid #000}.page-id-716 .display-back-img{filter:url("data:image/svg+xml;utf8,#grayscale");filter:gray;-webkit-filter:grayscale(100%)}@media only screen and (min-width: 1040px){.site-header-type2 .static-menu .main-navigation ul
+li{padding:10px
+25px 10px 0}}
+
+</style>
 </head>
-<body>
-<nav class="navbar navbar-inverse">
-      <div class="container-fluid">
-        <!-- Brand and toggle get grouped for better mobile display -->
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-9">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="#">Youtube Blog</a>
-        </div>
+<body class="page page-id-839 page-child parent-pageid-463 page-template page-template-template-modular page-template-template-modular-php site-header-type2 onsingle-fullwidth-right woo-sidebar-none woo-cols4 siteorigin-panels group-blog header-extras-on chrome">
 
-        <!-- Collect the nav links, forms, and other content for toggling -->
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-9">
-          <ul class="nav navbar-nav">
-            <li class="active"><%= link_to "Post", posts_path %></li>
-            <li><%= link_to "New Post", new_post_path %></li>
-            <li><a href="#">Link</a></li>
-            <% if !user_signed_in? %>
-            <li><%= link_to('Login', new_user_session_path)  %> </li>
-            <%else %>
-              <li><%= link_to('Logout', destroy_user_session_path, :method => :delete) %> </li>
-            <% end %>
 
-          </ul>
+       <style scoped>.page-header{background-color:#fff}</style>
+          <div id="page" class="hfeed site"> 
+          <%= render 'shared/header' %>
+
+
+                    <%= yield %>
+               
+               
+            <%= render 'shared/footer' %>   
+            </div>  
           
-        </div><!-- /.navbar-collapse -->
-      </div><!-- /.container-fluid -->
-   
-    </nav>
-	
-<p class="notice"><%= notice %></p>
-       <p class="alert"><%= alert %></p>
-
-       <div class="container">
-          <%= yield %>
-       </div>
 </body>
 </html>
