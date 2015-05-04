@@ -24,8 +24,11 @@
 				<header class="entry-header">
 					<div class="entry-thumbnail">
 						<a href="" rel="bookmark">
-						<%= link_to image_tag(f.image.url(:medium), :class => 'attachment-small-thumb wp-post-image')%>
-							
+						<% if f.image.exists? %>
+							<%= link_to image_tag(f.image.url(:medium), :class => 'attachment-small-thumb wp-post-image')%>
+						<% else %>
+							<%= f.body  %>
+						<% end %>	
 						</a> 
 						<a href="" class="icon-link" rel="bookmark">
 						<span class="post-icon" style="background-color:<%= f.color %>;"></span>
@@ -40,7 +43,7 @@
 						<a href="" rel="bookmark"><%= link_to f.title, f %></a>
 					</h1> 
 					<span class="cat-links"> 
-						<a href="" rel="category tag"><%= f.body  %></a>, 
+						<a href="" rel="category tag"></a>, 
 						<a href="" rel="category tag">Stories</a> 
 					</span> 
 				</header> 

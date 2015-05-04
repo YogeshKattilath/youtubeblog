@@ -1,49 +1,48 @@
-<%= simple_form_for @post do |f| %>
-	
-	<% if @post.errors.any? %>
-		<div id="errors">
-			<h2><%= pluralize(@post.errors.count, "error")%>  prevented this post to save </h2>
-			<ul>
-				<% @post.errors.full_messages.each do |msg| %>
-					<li><%= msg %></li>
+
+			<%= simple_form_for @post do |f| %>
+				
+				<% if @post.errors.any? %>
+					<div id="errors">
+						<h2><%= pluralize(@post.errors.count, "error")%>  prevented this post to save </h2>
+						<ul>
+							<% @post.errors.full_messages.each do |msg| %>
+								<li><%= msg %></li>
+							<% end %>
+						</ul>
+					</div>
 				<% end %>
-			</ul>
-		</div>
-	<% end %>
-	<p>
-		<%= f.collection_select :category_id, Category.all, :id, :name, {promt: "Choose a Category"} %>
-	</p>
-	<p>
-		<%= f.select(:color, [['#bb5551', '#bb5551'],
-                                  ['#228c9b', '#228c9b'],
-                                  ['#fff', '#fff'],
-                                  ['#343434', '#343434'],
-                                  ['#B43F5A', '#B43F5A'],
-                                  ['#4B1D37', '#4B1D37'],
-                                  ['#e3e3d8', '#e3e3d8'],
-                                  ['#BB5551', '#BB5551'],
-                                  ['#BB5551', '#BB5551'],	
-                                  ['#70575B', '#70575B']
-                                 ],{ :prompt => "Please select Color"}
-                                 ) %>
-	</p>
+				<p>
+					Select the Category : <%= f.collection_select :category_id, Category.all, :id, :name, {promt: "Choose a Category"} %>
+			
+					Select The Color : <%= f.select(:color, [['Red', '#bb5551'],
+			                                  ['Blue', '#228c9b'],
+			                                  ['Black', '#343434'],
+			                                  ['Pink', '#B43F5A'],
+			                                  ['Violet', '#4B1D37'],
+			                                  ['Gray', '#C0C0B1'],
+			                                  ['Blue2', '##9A2EFE'],
+			                                  ['Orange', '##FA8258'],	
+			                                  ['Dark', '#70575B']
+			                                 ],{ :prompt => "Please select Color"}
+			                                 ) %>
+				</p>
 
 
-	<p>
-		<%= f.input :image %>
-	</p>
-	<p>
-		<%= f.label :title %><br>
-		<%= f.text_field :title %>
-	</p>
+				<p>
+					<%= f.input :image %>
+				</p>
+				<p>
+					<%= f.label :title %><br>
+					<%= f.text_field :title %>
+				</p>
 
-	<p>
-		<%= f.label :body %><br>
-		<%= f.text_area :body %>
-	</p>
+				<p>
+					<%= f.label :body %><br>
+					<%= f.text_area :body %>
+				</p>
 
-	<p>
-		<%= f.submit  "Save" %>
-	</p>
+				<p>
+					<%= f.submit  "Save" %>
+				</p>
 
-<% end %>
+			<% end %>
