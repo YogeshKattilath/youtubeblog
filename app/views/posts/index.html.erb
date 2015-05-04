@@ -25,6 +25,7 @@
 					<div class="entry-thumbnail">
 						<a href="" rel="bookmark">
 						<% if f.image.exists? %>
+						
 							<%= link_to image_tag(f.image.url(:medium), :class => 'attachment-small-thumb wp-post-image')%>
 						<% else %>
 							<%= f.body  %>
